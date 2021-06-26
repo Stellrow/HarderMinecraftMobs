@@ -1,0 +1,43 @@
+General:
+  ChanceConfig:
+    spawnWithRandomGearChance: 30
+  MobConfig:
+    AffectMob:
+      affectZombies: true
+      affectSkeletons: true
+      affectSpiders: true
+      affectCreepers: true
+    MobsStrength:
+      Zombie:
+        randomGear: true
+        higherHealth: true
+        higherSpeed: true
+        higherAttack: true
+      Skeleton:
+        randomGear: true
+        higherHealth: true
+        higherSpeed: true
+        higherAttack: true
+      Spider:
+        higherHealth: true
+        higherSpeed: true
+        higherAttack: true
+      Creeper:
+        higherHealth: true
+        higherSpeed: true
+Stats:
+  Zombie:
+    Health: 25
+    Speed: 0.26
+    Attack: 5
+  Skeleton:
+    Health: 25
+    Speed: 0.3
+    Attack: 4
+  Spider:
+    Health: 20
+    Speed: 0.33
+    Attack: 5
+  Creeper:
+    Health: 25
+    Speed: 0.3
