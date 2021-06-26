@@ -17,11 +17,14 @@ public class ConfigurationManager {
     public boolean affectSpiders;
     public boolean affectCreepers;
 
+    public boolean affectSpawners;
+
     private void updateAffectValues(FileConfiguration configuration){
         affectZombies = configuration.getBoolean("General.MobConfig.affectZombies",true);
         affectSkeletons = configuration.getBoolean("General.MobConfig.affectSkeletons",true);
         affectSpiders = configuration.getBoolean("General.MobConfig.affectSpiders",true);
         affectCreepers = configuration.getBoolean("General.MobConfig.affectCreeper",true);
+        affectSpawners = configuration.getBoolean("General.AffectSpawnerMobs",true);
     }
 
     public boolean affectZombieHealth;

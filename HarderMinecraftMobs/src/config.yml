@@ -1,4 +1,5 @@
 General:
+  AffectSpawnerMobs: true
   ChanceConfig:
     spawnWithRandomGearChance: 30
   MobConfig:

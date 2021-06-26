@@ -5,7 +5,7 @@ import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.EntitySpawnEvent;
+import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.Arrays;
@@ -20,7 +20,12 @@ public class HMMEvents implements Listener {
     }
 
     @EventHandler
-    public void onEntitySpawn(EntitySpawnEvent event){
+    public void onEntitySpawn(CreatureSpawnEvent event){
+        if (event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.SPAWNER){
+            if (!pl.configurationManager.affectSpawners){
+                return;
+            }
+        }
         if (event.getEntityType()== EntityType.ZOMBIE){
             if (pl.configurationManager.affectZombies){
                 Zombie zombie = (Zombie) event.getEntity();
